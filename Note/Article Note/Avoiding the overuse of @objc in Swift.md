@@ -46,6 +46,7 @@ class MyViewController: UIViewController, ViewControllerType {
 - 继承这个协议的协议都会自动`@objc`
 - 这个协议继承的协议都必须标记`@objc`
 - 协议里用到了结构体,但是结构体是不能标记`@objc`
+
 ### Stop @objc from making everything horrible
 我们现在可以通过拆分`ViewControllerType`来解决这个问题
 ```swift
