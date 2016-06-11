@@ -1,4 +1,4 @@
-﻿# Avoiding the overuse of @objc in Swift
+# Avoiding the overuse of @objc in Swift
 
 > [文章链接](http://www.jessesquires.com/avoiding-objc-in-swift/?utm_campaign=Swift%2BSandbox&utm_medium=web&utm_source=Swift_Sandbox_45)
 
@@ -6,8 +6,8 @@
 在 Swift 2.2中,在协议扩展中使用`#selector`需要加上`@objc`,在之前的`Selector("method:")`中是不需要的.
 
 ### Configuring view controllers with protocol extensions
-如果每个控制器都有模型和一个 Cancel 按钮,我们可以使用结构体和扩展来复用.
-``` 
+如果每个控制器都有模型和一个 Cancel 按钮,并且点击按钮方法都是定制的,我们可以使用结构体和扩展来复用.
+```swift
 struct ViewModel {
     let title: String
 }
@@ -26,7 +26,7 @@ extension ViewControllerType where Self: UIViewController {
 }
 ```
 现在我们可以让控制器遵循这个协议,然后在`viewDidLoad`中调用方法.
-```
+```swift
 class MyViewController: UIViewController, ViewControllerType {
     var viewModel = ViewModel(title: "Title")
 
@@ -44,7 +44,7 @@ class MyViewController: UIViewController, ViewControllerType {
 只要在协议扩展中使用`#selector`,那么在遵循这个协议的任何地方都需要加上`@objc`,这是毁灭性的.
 ### Stop @objc from making everything horrible
 我们现在可以通过拆分`ViewControllerType`来解决这个问题
-```
+```swift
 extension NavigationItemConfigurable where Self: UIViewController {
     func configureNavigationItem() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(
@@ -65,4 +65,5 @@ protocol ViewModelConfigurable {
 typealias ViewControllerType = protocol<ViewModelConfigurable, NavigationItemConfigurable>
 ```
 
-> 总结:如果在协议扩展中使用了`#selector`,那么可以将需要加`@objc`关键字的方法单独拿出来写一个协议,然后通过`typealias`来组成协议,如果需要的话,这样就可以解决.
+> 总结:如果在协议扩展中使用了`#selector`,那么可以将需要加`@objc`关键字的方法单独拿出来写一个协议,然后通过`typealias`来组成协议(如果需要的话),这样就可以解决.
+
