@@ -41,7 +41,11 @@ class MyViewController: UIViewController, ViewControllerType {
 }
 ```
 ### When @objc tries to ruin everything
-只要在协议扩展中使用`#selector`,那么在遵循这个协议的任何地方都需要加上`@objc`,这是毁灭性的.
+只要在协议扩展中使用`#selector`,那么会遇到3个问题:
+
+- 继承这个协议的协议都会自动`@objc`
+- 这个协议继承的协议都必须标记`@objc`
+- 协议里用到了结构体,但是结构体是不能标记`@objc`
 ### Stop @objc from making everything horrible
 我们现在可以通过拆分`ViewControllerType`来解决这个问题
 ```swift
