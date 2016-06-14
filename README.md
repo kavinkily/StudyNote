@@ -6,3 +6,8 @@
 
 ### 读书笔记
 1.[Swift Apprentice 读书笔记](./Note/Book Note/Swift Apprentice 读书笔记.md)
+	- 在 TestProject 目录下有该书最后几张 Demo
+
+### 译文
+1.[译《WWDC 2016 Initial Impressions》](./Note/Translation Article/译《WWDC 2016 Initial Impressions》.md)
+
