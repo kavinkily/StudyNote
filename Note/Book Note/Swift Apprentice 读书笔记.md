@@ -47,8 +47,8 @@ filter 函数可以判断数组元素是否符合条件。
 - 只有当最顶层的类的属性都被实例化了，self 才能被调用,也就是在 super 调用以后。
 - `required`告诉子类必须实现和重写这个方法。
 - `convenience`可以让初始化方法直接调用别的初始化方法，但是有以下几点要注意
-- 必须调用的当前类的其他初始化方法
-- 必须在最后调用指定的初始化方法
+    - 必须调用的当前类的其他初始化方法
+    - 必须在最后调用指定的初始化方法
 - 值类型存储在堆里，引用类型存储在栈。
 ## Chapter 16
 - Swift 不同于 C，他的原始值不仅限于 Int,可以自己分配任意基本类型，并且设置了第一个 value 的原始值后，可以自动补齐后面 value 的值。
@@ -64,8 +64,8 @@ filter 函数可以判断数组元素是否符合条件。
 - 创建单例
 ```swift
 class Manager {
-static let shareManager = Manager()
-private init() {}
+    static let shareManager = Manager()
+    private init() {}
 }
 ```
 - 用 class 创建单例比 struct 好，因为使用结构体单例不能改变结构体里属性的值，class 可以，因为 class 只有地址在内存里是不变的。
@@ -89,12 +89,11 @@ private init() {}
 ```swift
 // 利用以下代码可以捕捉错误
 do {
-try roll(1, secondDice: 1)
-// 没有错误，继续执行代码，有错误就调到 catch
+    try roll(1, secondDice: 1)
+    // 没有错误，继续执行代码，有错误就调到 catch
 } catch RollingError.Doubles {
-// 处理错误
+    // 处理错误
 }
 //try! 类似强制展开 不用处理错误 无错通行 有错崩溃
 //try? 类似可选调用 无错通行 有错返回nil
 ```
-
