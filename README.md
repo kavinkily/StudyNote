@@ -10,6 +10,7 @@
 
 ### 译文
 1.[译《WWDC 2016 Initial Impressions》](./Note/Translation Article/译《WWDC 2016 Initial Impressions》.md)
+
 2.[What’s New in Swift 3? 笔记](./Note/Translation Article/What’s New in Swift 3- 笔记.md)
 
 

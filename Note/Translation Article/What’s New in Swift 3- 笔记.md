@@ -194,6 +194,7 @@ for x in sequence(first: 0.1, next: { $0 * 2 }).prefix(while: { $0 < 4 }) {
 - `#keyPath()`和`#selector() `类似，可以帮助你防止错误字在使用字符串类型 API 时
 - 使用`pi`可以获得圆周率，具体请看[ [SE-0067]](https://github.com/apple/swift-evolution/blob/master/proposals/0067-floating-point-protocols.md)
 - NS 前缀被取消，`Date`替代`NSDate`
+
 ## Improvements to Tooling
 Swift3 提高了提示错误和警告信息的精准度，并且他的运行和编译速度也更快了：
 - 通过改进字符串 hashing 提高了3倍速度在字符串字典中
