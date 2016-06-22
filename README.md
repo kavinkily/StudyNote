@@ -13,4 +13,4 @@
 
 2.[What’s New in Swift 3? 笔记](./Note/Translation Article/What’s New in Swift 3- 笔记.md)
 
-
+3.[译 Swift Talk -- NetWorking](./Note/Translation Article/[译] Swift Talk -- NetWorking.md)
