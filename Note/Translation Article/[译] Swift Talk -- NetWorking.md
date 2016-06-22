@@ -230,6 +230,6 @@ extension Episode {
 
 22：21 让我们添加` POST`支持在下一节。
 
-> 这篇文章同时发布在我的 [Git](https://github.com/KieSun/StudyNote) 上,这个项目我会更新一些平时学习的资源和笔记，有兴趣的朋友可以 Watch 一下。
+> 这篇文章同时发布在我的 [Git](https://github.com/KieSun/StudyNote/blob/master/Note/Translation%20Article/[译]%20Swift%20Talk%20--%20NetWorking.md) 上,这个项目我会更新一些平时学习的资源和笔记，有兴趣的朋友可以 Watch 一下。
 
 
